@@ -143,7 +143,8 @@ p {
   margin-right: 50px;
 }
 .contacts .link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -158,6 +159,23 @@ p {
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--col-accent);
+}
+.contacts .link::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  justify-content: center;
+}
+.link.icon-envelope::before {
+  background-image: url(../images/envelope.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.link.icon-smartphone::before {
+  background-image: url(../images/smartphone.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ---------------HERO------------------ */
@@ -249,6 +267,26 @@ p {
   margin-bottom: 30px;
   background-color: var(--back-col-feature-icon);
   border-radius: 4px;
+}
+.title.icon-antenna::before {
+  background-image: url("../images/antenna.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.title.icon-clock::before {
+  background-image: url("../images/clock.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.title.icon-diagram::before {
+  background-image: url("../images/diagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.title.icon-astronaut::before {
+  background-image: url("../images/astronaut.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .features-list > .item:not(:last-child) {
   margin-right: 30px;
