@@ -160,7 +160,28 @@ p {
 .contacts .link:focus {
   color: var(--col-accent);
 }
-.contacts .link::before {
+
+.envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.envelope:hover {
+  fill: #2196f3;
+}
+.smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.smartphone:hover {
+  fill: #2196f3;
+}
+/* Додавання іконок css методом */
+
+/* .contacts .link::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -176,7 +197,7 @@ p {
   background-image: url(../images/smartphone.svg);
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 /* ---------------HERO------------------ */
 .hero {
@@ -260,6 +281,18 @@ p {
 .features-list > .item {
   justify-content: space-between;
 }
+.features .contein {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--back-col-feature-icon);
+  border-radius: 4px;
+}
+/* Додавання іконок css методом */
+/* 
 .features-list .title::before {
   content: "";
   display: block;
@@ -286,8 +319,8 @@ p {
 .title.icon-astronaut::before {
   background-image: url("../images/astronaut.svg");
   background-repeat: no-repeat;
-  background-position: center;
-}
+  background-position: center; 
+}*/
 .features-list > .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -355,10 +388,59 @@ p {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 
   color: var(--col-minor);
 }
+.team .list-soc {
+  display: flex;
+  justify-content: center;
+}
+.team .social-network {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  fill: #afb1b8;
+  cursor: pointer;
+}
+.team .social-network:hover {
+  background-color: #2196f3;
+  border-radius: 50%;
+  fill: #ffffff;
+}
 
+/* -------------------clientage----------------- */
+.clientage {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #fff;
+}
+.clientage .section-title {
+  margin-bottom: 50px;
+}
+.clientage .list {
+  display: flex;
+  justify-content: center;
+}
+.clientage .item {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  fill: #afb1b8;
+  cursor: pointer;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clientage .item:hover {
+  fill: #2196f3;
+  border-color: #2196f3;
+}
 /* -------------------FOOTER--------------------- */
 .footer {
   padding-top: 60px;
