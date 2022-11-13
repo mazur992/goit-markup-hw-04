@@ -7,6 +7,8 @@
   --col-main: #212121;
   --col-minor: #757575;
   --col-border: #ececec;
+  --col-fill-networks: #afb1b8;
+  --col-portfolio-border: #eeeeee;
   --back-col: #c4c4c4;
   --back-col-team: #f5f4fa;
   --back-col-btn: #188ce8;
@@ -21,8 +23,6 @@
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  /* outline: 2px solid aqua; */
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -106,12 +106,6 @@ p {
 .header-nav .item + .item {
   margin-left: 50px;
 }
-/* .header-nav .item:not(:last-child) {
-  margin-right: 50px;
-} */
-/* .header-nav .item:last-child {
-  margin-right: 0;
-} */
 
 .header-nav .link {
   display: block;
@@ -165,39 +159,18 @@ p {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: #757575;
+  fill: var(--col-minor);
 }
 .envelope:hover {
-  fill: #2196f3;
+  fill: var(--col-accent);
 }
 .smartphone {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
-  fill: #757575;
+  fill: var(--col-minor);
 }
 .smartphone:hover {
-  fill: #2196f3;
+  fill: var(--col-accent);
 }
-/* Додавання іконок css методом */
-
-/* .contacts .link::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  justify-content: center;
-}
-.link.icon-envelope::before {
-  background-image: url(../images/envelope.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.link.icon-smartphone::before {
-  background-image: url(../images/smartphone.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-} */
 
 /* ---------------HERO------------------ */
 .hero {
@@ -291,36 +264,7 @@ p {
   background-color: var(--back-col-feature-icon);
   border-radius: 4px;
 }
-/* Додавання іконок css методом */
-/* 
-.features-list .title::before {
-  content: "";
-  display: block;
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--back-col-feature-icon);
-  border-radius: 4px;
-}
-.title.icon-antenna::before {
-  background-image: url("../images/antenna.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.title.icon-clock::before {
-  background-image: url("../images/clock.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.title.icon-diagram::before {
-  background-image: url("../images/diagram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.title.icon-astronaut::before {
-  background-image: url("../images/astronaut.svg");
-  background-repeat: no-repeat;
-  background-position: center; 
-}*/
+
 .features-list > .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -403,20 +347,20 @@ p {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  fill: #afb1b8;
+  fill: var(--col-fill-networks);
   cursor: pointer;
 }
 .team .social-network:hover {
-  background-color: #2196f3;
+  background-color: var(--col-accent);
   border-radius: 50%;
-  fill: #ffffff;
+  fill: var(--col-white);
 }
 
 /* -------------------clientage----------------- */
 .clientage {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: #fff;
+  background-color: var(--col-white);
 }
 .clientage .section-title {
   margin-bottom: 50px;
@@ -432,14 +376,14 @@ p {
   justify-content: center;
   align-items: center;
   margin-right: 30px;
-  fill: #afb1b8;
+  fill: var(--col-fill-networks);
   cursor: pointer;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--col-fill-networks);
   border-radius: 4px;
 }
 .clientage .item:hover {
-  fill: #2196f3;
-  border-color: #2196f3;
+  fill: var(--col-accent);
+  border-color: var(--col-accent);
 }
 /* -------------------FOOTER--------------------- */
 .footer {
@@ -480,7 +424,47 @@ p {
 .link.map {
   color: var(--col-white);
 }
+.footer .container {
+  display: flex;
+}
+.footer .title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 
+  color: var(--col-white);
+}
+.footer .list-soc {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .social-network {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  fill: var(--col-white);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .social-network:hover {
+  background-color: var(--col-accent);
+  border-radius: 50%;
+  fill: var(--col-white);
+}
+.address-container {
+  width: 231px;
+  margin-right: 70px;
+}
+.network-container {
+  width: 206px;
+  margin-top: 12px;
+}
 /* --------------------PORTFOLIO------------------ */
 .portfolio {
   padding-top: 94px;
@@ -520,9 +504,11 @@ p {
 }
 .portfolio-conteiner {
   width: 370px;
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
-  border-top: none;
+  border: 1px solid var(--col-portfolio-border);
+}
+.portfolio-conteiner:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .list-filtr {
   display: flex;
@@ -545,6 +531,8 @@ p {
 
 .portfolio .title {
   margin-bottom: 4px;
+  padding: 0 24px;
+  padding-top: 20px;
 
   font-size: 18px;
   line-height: 1.2;
@@ -552,6 +540,8 @@ p {
   color: var(--col-main);
 }
 .portfolio .text {
+  padding: 20px 24px;
+  padding-top: 0;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
