@@ -156,20 +156,12 @@ p {
 }
 
 .envelope {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
-  fill: var(--col-minor);
-}
-.envelope:hover {
-  fill: var(--col-accent);
+  fill: currentColor;
 }
 .smartphone {
   margin-right: 10px;
-  fill: var(--col-minor);
-}
-.smartphone:hover {
-  fill: var(--col-accent);
+  fill: currentColor;
 }
 
 /* ---------------HERO------------------ */
@@ -181,12 +173,8 @@ p {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 0, 0, 0.2),
-      rgba(0, 255, 0, 0.2)
-    ),
-    url("../images/background-hero.jpg");
+  background: rgba(47, 48, 58, 0.4);
+  background-image: url("../images/background-hero.jpg");
   background-color: var(--back-col);
   background-repeat: no-repeat;
   background-position: center;
@@ -348,11 +336,12 @@ p {
   align-items: center;
   margin-right: 10px;
   fill: var(--col-fill-networks);
+  background-color: var(--col-white);
+  border-radius: 50%;
   cursor: pointer;
 }
 .team .social-network:hover {
   background-color: var(--col-accent);
-  border-radius: 50%;
   fill: var(--col-white);
 }
 
@@ -454,7 +443,6 @@ p {
 }
 .footer .social-network:hover {
   background-color: var(--col-accent);
-  border-radius: 50%;
   fill: var(--col-white);
 }
 .address-container {
